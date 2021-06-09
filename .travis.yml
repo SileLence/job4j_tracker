@@ -18,6 +18,7 @@ notifications:
       - smkslnc@gmail.com
     on_success: never # default: change
     on_failure: always # default: always
+
 env:
   global:
-    - CODECOV_TOKEN='c61e1d60-d363-4b87-95f4-ab18af19566b'
+    - CODECOV_TOKEN="c61e1d60-d363-4b87-95f4-ab18af19566b"
