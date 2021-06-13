@@ -33,4 +33,22 @@ public class PointTest {
         double actual = a.distance(b);
         Assert.assertEquals(expected, actual, 0.0001);
     }
+
+    @Test
+    public void when246To531Then5() {
+        Point a = new Point(2, 4, 6);
+        Point b = new Point(5, 3, 1);
+        double expected = 5.916;
+        double actual = a.distance3d(b);
+        Assert.assertEquals(expected, actual, 0.001);
+    }
+
+    @Test
+    public void when333To111Then3() {
+        Point a = new Point(3, 3, 3);
+        Point b = new Point(1, 1, 1);
+        double expected = 3.464;
+        double actual = a.distance3d(b);
+        Assert.assertEquals(expected, actual, 0.001);
+    }
 }
