@@ -29,13 +29,4 @@ public class Point {
                 + pow(this.y - that.y, 2)
                 + pow(this.z - that.z, 2));
     }
-
-    public static void main(String[] args) {
-        Point a = new Point(-14, -3);
-        Point b = new Point(7, 35);
-        Point a3d = new Point(0, 0, 0);
-        Point b3d = new Point(0, 0, 0);
-        System.out.println(a.distance(b));
-        System.out.println(a3d.distance3d(b3d));
-    }
 }
