@@ -1,6 +1,4 @@
-package ru.job4j.pojo.ru.job4j.pojo;
-
-import ru.job4j.pojo.Book;
+package ru.job4j.pojo;
 
 public class Library {
     public static void main(String[] args) {
@@ -14,8 +12,7 @@ public class Library {
         books[2] = book3;
         books[3] = book4;
         System.out.println("Список книг:");
-        for (int i = 0; i < books.length; i++) {
-            Book book = books[i];
+        for (Book book : books) {
             System.out.println(book.getName() + " - " + book.getNumberOfPages());
         }
         System.out.println();
@@ -23,14 +20,13 @@ public class Library {
         Book temp = books[0];
         books[0] = books[3];
         books[3] = temp;
-        for (int i = 0; i < books.length; i++) {
-            Book book = books[i];
+        for (Book book : books) {
             System.out.println(book.getName() + " - " + book.getNumberOfPages());
         }
         System.out.println();
         System.out.println("Ищем книгу с именем \"Clean Code\":");
         for (Book book : books) {
-            if (book.getName().equals("Clean Code")) {
+            if ("Clean Code".equals(book.getName())) {
                 System.out.println(book.getName() + " - " + book.getNumberOfPages());
             }
         }
