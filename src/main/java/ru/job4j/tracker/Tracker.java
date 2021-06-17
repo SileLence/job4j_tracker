@@ -36,22 +36,11 @@ public class Tracker {
                 sizeOfResult++;
             }
         }
-        if (sizeOfResult != 0) {
-            return Arrays.copyOf(result, sizeOfResult);
-        }
-        return null;
+        return Arrays.copyOf(result, sizeOfResult);
     }
 
     public Item[] findAll() {
-        Item[] result = new Item[size];
-        int sizeOfResult = 0;
-        for (int i = 0; i < size; i++) {
-            if (items[i] != null) {
-                result[sizeOfResult] = items[i];
-                sizeOfResult++;
-            }
-        }
-        return Arrays.copyOf(result, sizeOfResult);
+        return Arrays.copyOf(items, size);
     }
 
     public boolean replace(int id, Item item) {
