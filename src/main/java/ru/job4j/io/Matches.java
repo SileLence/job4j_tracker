@@ -10,8 +10,15 @@ public class Matches {
         int count = 11;
         while (count > 0) {
             String player = turn ? "Первый игрок" : "Второй игрок";
-            System.out.println(player + ", введите число от 1 до 3:");
-            int matches = input.nextInt();
+            int matches;
+            do {
+                System.out.println(player + ", введите число от 1 до 3:");
+                while (!input.hasNextInt()) {
+                    System.out.println(player + ", введите число от 1 до 3:");
+                    input.next();
+                }
+                matches = input.nextInt();
+            } while (matches < 1 || matches > 3);
             turn = !turn;
             count -= matches;
             System.out.println("Осталось спичек: " + count);
