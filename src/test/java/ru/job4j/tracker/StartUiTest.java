@@ -33,9 +33,9 @@ public class StartUiTest {
         Tracker tracker = new Tracker();
         Item item = new Item("new item");
         tracker.add(item);
-        tracker.delete(item.getId());
-        Item[] expected = new Item[0];
-        Item[] deleted = tracker.findAll();
-        assertArrayEquals(expected, deleted);
+        String[] answers = {String.valueOf(item.getId())};
+        StartUi.deleteItem(new StubInput(answers), tracker);
+        Item deleted = tracker.findById(item.getId());
+        assertSame(deleted, null);
     }
 }
