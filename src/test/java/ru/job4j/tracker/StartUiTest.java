@@ -25,7 +25,7 @@ public class StartUiTest {
     public void whenReplaceItem() {
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("Item name"));
-        String id = item.getId() + "";
+        String id = String.valueOf(item.getId());
         Input input = new StubInput(
                 new String[] {"0", id, "Replaced", "1"}
         );
@@ -42,7 +42,7 @@ public class StartUiTest {
     public void whenDeleteItem() {
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("Item name"));
-        String id = item.getId() + "";
+        String id = String.valueOf(item.getId());
         Input input = new StubInput(
                 new String[] {"0", id, "1"}
         );
