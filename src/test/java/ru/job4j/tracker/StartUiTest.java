@@ -84,7 +84,7 @@ public class StartUiTest {
     public void whenFindById() {
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("Item name"));
-        String id = item.getId() + "";
+        String id = String.valueOf(item.getId());
         Input input = new StubInput(
                 new String[] {"0", id, "1"}
         );
