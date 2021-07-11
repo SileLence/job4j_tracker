@@ -1,11 +1,8 @@
 package ru.job4j.tracker;
 
 public final class SingleTracker {
-    private static SingleTracker instance = null;
     private Tracker tracker = new Tracker();
-    private Item[] items = new Item[100];
-    private int ids = 1;
-    private int size = 0;
+    private static SingleTracker instance;
 
     private SingleTracker() {
     }
