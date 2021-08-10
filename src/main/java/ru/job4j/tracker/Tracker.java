@@ -8,9 +8,9 @@ public class Tracker {
     private int ids = 1;
 
     private int indexOf(int id) {
-        for (Item item : items) {
-            if (item.getId() == id) {
-                return items.indexOf(item);
+        for (int index = 0; index < items.size(); index++) {
+            if (items.get(index).getId() == id) {
+                return index;
             }
         }
         return -1;
@@ -38,7 +38,7 @@ public class Tracker {
     }
 
     public List<Item> findAll() {
-        return items;
+        return List.copyOf(items);
     }
 
     public boolean replace(int id, Item item) {
