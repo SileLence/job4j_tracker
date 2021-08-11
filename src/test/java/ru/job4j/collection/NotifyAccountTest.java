@@ -36,9 +36,9 @@ public class NotifyAccountTest {
                 new Account("713", "Lion King", "0041745"),
                 new Account("839", "Ivan Bergman", "0016899")
         );
-        HashSet<Account> accountSet = new HashSet<>(NotifyAccount.sent(accounts));
+        HashSet<Account> set = NotifyAccount.sent(accounts);
         int expected = 4;
-        int actual = accountSet.size();
+        int actual = set.size();
         assertEquals(expected, actual);
     }
 }
