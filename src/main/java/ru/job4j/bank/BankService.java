@@ -49,10 +49,12 @@ public class BankService {
                                  double amount) {
         Account senderAccount = findByRequisite(srcPassport, srcRequisite);
         Account recipientAccount = findByRequisite(destPassport, destRequisite);
-        if (senderAccount.getBalance() >= amount) {
-            senderAccount.setBalance(senderAccount.getBalance() - amount);
-            recipientAccount.setBalance(recipientAccount.getBalance() + amount);
-            return true;
+        if (senderAccount != null && recipientAccount != null) {
+            if (senderAccount.getBalance() >= amount) {
+                senderAccount.setBalance(senderAccount.getBalance() - amount);
+                recipientAccount.setBalance(recipientAccount.getBalance() + amount);
+                return true;
+            }
         }
         return false;
     }
