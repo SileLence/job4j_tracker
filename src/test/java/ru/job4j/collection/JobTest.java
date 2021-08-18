@@ -16,7 +16,7 @@ public class JobTest {
                 new Job("Active", 2),
                 new Job("Direct", 1)
         );
-        assertTrue(result < 0);
+        assertThat(result, lessThan(0));
     }
 
     @Test
@@ -26,7 +26,7 @@ public class JobTest {
                 new Job("Active", 2),
                 new Job("Direct", 1)
         );
-        assertTrue(result > 0);
+        assertThat(result, greaterThan(0));
     }
 
     @Test
@@ -36,7 +36,7 @@ public class JobTest {
                 new Job("Active", 2),
                 new Job("Direct", 1)
         );
-        assertTrue(result > 0);
+        assertThat(result, greaterThan(0));
     }
 
     @Test
@@ -46,7 +46,7 @@ public class JobTest {
                 new Job("Active", 2),
                 new Job("Direct", 1)
         );
-        assertTrue(result < 0);
+        assertThat(result, lessThan(0));
     }
 
     @Test
