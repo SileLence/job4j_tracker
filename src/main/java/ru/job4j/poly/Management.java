@@ -20,6 +20,4 @@ public class Management {
             vehicle.move();
         }
     }
-
-
 }

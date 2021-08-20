@@ -1,7 +1,7 @@
 package ru.job4j.starbuzz;
 
 public class Whip extends Beverage {
-    Beverage beverage;
+    private Beverage beverage;
 
     public Whip(Beverage beverage) {
         this.beverage = beverage;

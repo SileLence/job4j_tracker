@@ -41,10 +41,10 @@ public class Item implements Comparable<Item> {
 
     @Override
     public String toString() {
-        return "Item --> " +
-                "ID: " + id +
-                ", Name: '" + name + '\'' +
-                ", Created: " + created;
+        return "Item --> "
+                + "ID: " + id
+                + ", Name: '" + name + '\''
+                + ", Created: " + created;
     }
 
     @Override
