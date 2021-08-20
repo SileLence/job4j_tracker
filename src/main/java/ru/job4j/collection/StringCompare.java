@@ -6,18 +6,14 @@ public class StringCompare implements Comparator<String> {
 
     @Override
     public int compare(String left, String right) {
-        char[] list1 = left.toCharArray();
-        char[] list2 = right.toCharArray();
-        int maxIndex = Math.max(list1.length, list2.length);
-        int result = 0;
-        for (int index = 0; index < maxIndex; index++) {
-            if (index < list1.length && index < list2.length) {
-                result = Character.compare(list1[index], list2[index]);
-            }
+        int minLength = Math.min(left.length(), right.length());
+        int result;
+        for (int index = 0; index < minLength; index++) {
+            result = Character.compare(left.charAt(index), right.charAt(index));
             if (result != 0) {
                 return result;
             }
         }
-        return list1.length - list2.length;
+        return Integer.compare(left.length(), right.length());
     }
 }
