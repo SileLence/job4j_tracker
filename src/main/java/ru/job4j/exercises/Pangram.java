@@ -1,6 +1,7 @@
 package ru.job4j.exercises;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Pangram {
     public static boolean checkString(String s) {
