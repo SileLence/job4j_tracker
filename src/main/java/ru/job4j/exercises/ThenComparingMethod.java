@@ -51,15 +51,14 @@ public class ThenComparingMethod {
     }
 
     public static Comparator<User> thenComparing() {
-        return ThenComparingMethod.ascByName()
-                .thenComparing(ThenComparingMethod.descByAge());
+        return ascByName().thenComparing(descByAge());
     }
 
     public static Comparator<User> ascByName() {
-        return Comparator.naturalOrder();
+        return Comparator.comparing(User::getName);
     }
 
     public static Comparator<User> descByAge() {
-        return Comparator.naturalOrder();
+        return Comparator.comparing(User::getAge).reversed();
     }
 }
