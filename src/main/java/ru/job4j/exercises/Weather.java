@@ -9,7 +9,10 @@ public class Weather {
             if (map.containsKey(info.getCity())) {
                 Info infoInMap = map.get(info.getCity());
                 int newRainfall = infoInMap.getRainfall() + info.getRainfall();
-                map.computeIfPresent(info.getCity(), (key, value) -> new Info(info.getCity(), newRainfall));
+                map.computeIfPresent(
+                        info.getCity(), (key, value)
+                                -> new Info(info.getCity(), newRainfall)
+                );
             }
             map.putIfAbsent(info.getCity(), info);
         }
@@ -48,8 +51,8 @@ public class Weather {
                 return false;
             }
             Info info = (Info) o;
-            return rainfall == info.rainfall &&
-                    Objects.equals(city, info.city);
+            return rainfall == info.rainfall
+                    && Objects.equals(city, info.city);
         }
 
         @Override
