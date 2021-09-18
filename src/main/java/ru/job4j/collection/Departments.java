@@ -1,3 +1,5 @@
+//комментарий, чтобы внести изменения в файл и сделать коммит
+
 package ru.job4j.collection;
 
 import java.util.*;
@@ -23,3 +25,5 @@ public class Departments {
         orgs.sort(Comparator.nullsLast(new DepDescComp()));
     }
 }
+
+//комментарий, чтобы внести изменения в файл и сделать коммит

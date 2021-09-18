@@ -1,3 +1,5 @@
+//комментарий, чтобы внести изменения в файл и сделать коммит
+
 package ru.job4j.collection;
 
 import java.util.Comparator;
@@ -14,3 +16,5 @@ public class DepDescComp implements Comparator<String> {
         return result;
     }
 }
+
+//комментарий, чтобы внести изменения в файл и сделать коммит
