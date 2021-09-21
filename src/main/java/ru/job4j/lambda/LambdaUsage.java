@@ -10,7 +10,7 @@ public class LambdaUsage {
             System.out.println("Compare strings by length descending — " + left.length()
                     + " : " + right.length());
             System.out.print("Result: ");
-            return right.length() - left.length();
+            return Integer.compare(right.length(), left.length());
         };
         System.out.println(stringComparator.compare(str1, str2));
     }
