@@ -11,7 +11,7 @@ public class Pet {
         this.sound = sound;
     }
 
-    public void eat() {                     // Как будто внесли изменение в родительский класс
-        System.out.println("Питомец ест");  // У котов метод есть, у собак его нет
+    public void eat() {
+        System.out.println("Питомец ест");
     }
 }
