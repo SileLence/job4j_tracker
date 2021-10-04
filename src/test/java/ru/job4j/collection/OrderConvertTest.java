@@ -21,7 +21,7 @@ public class OrderConvertTest {
 
     @Test
     public void whenNoSameObjects() {
-        List<Order> orders = new ArrayList<>(asList(
+        List<Order> orders = new ArrayList<>(List.of(
                 new Order("45tr", "Pillow"),
                 new Order("220v", "Drill"),
                 new Order("R2D2", "SW"),
